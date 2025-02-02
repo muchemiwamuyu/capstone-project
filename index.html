@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f53e04fcb4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>Porsche</title>
 </head>
-<body>
-    
+
+<body class="overflow-x-hidden">
+    <!-- video section -->
+    <section class="relative w-full h-screen">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="./assets/911.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <!-- header section -->
+         <header class="w-full absolute text-lg left-5 top-6">
+            <i class="fa-solid fa-bars text-white"></i>
+            <button class="text-white">Menu</button>
+            <h1 class="font-custom text-white text-center text-3xl mt-[-1%]">Porsche</h1>
+         </header>
+
+         <!-- Content -->
+          <div class="absolute bottom-38 left-32"> 
+            <h2 class="text-white text-7xl space-x-12 font-serif font-bold">Overfeel</h2>
+            <br>
+            <button class="w-64 h-12 border border-2px border-white text-white hover:border-[#c3c9bf] rounded-sm">Discover the New Taycaan gts</button>
+          </div> 
+    </section>
+    <main class="w-full  h-screen bg-white absolute">
+
+    </main>
 </body>
+
 </html>

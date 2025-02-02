@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./public/fonts/porsche/911PorschaBold-Pgzd.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-custom {
+    font-family: 'MyCustomFont', sans-serif;
+}
