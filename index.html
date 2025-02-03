@@ -16,26 +16,349 @@
         <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
             <source src="./assets/911.mp4" type="video/mp4">
         </video>
-        
+
         <!-- Dark Overlay -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
-        <!-- header section -->
-         <header class="w-full absolute text-lg left-5 top-6">
-            <i class="fa-solid fa-bars text-white"></i>
-            <button class="text-white">Menu</button>
-            <h1 class="font-custom text-white text-center text-3xl mt-[-1%]">Porsche</h1>
-         </header>
+        <!-- Overlay (Blur Effect) -->
+        <div id="overlay"
+            class="fixed inset-0 bg-black opacity-50 backdrop-blur-sm hidden transition-opacity duration-300"></div>
 
-         <!-- Content -->
-          <div class="absolute bottom-38 left-32"> 
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="fixed left-0 top-0 h-70 w-80 bg-white text-white transform -translate-x-full transition-transform duration-300">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold">Sidebar Menu</h2>
+                <ul class="mt-40 space-y-4">
+                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Home</a></li>
+                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">About</a></li>
+                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Services</a></li>
+                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- header section -->
+        <header class="w-full text-lg absolute left-5 top-6">
+            <button id="toggleBtn" onclick="closeBtn()" class="text-white"><i class="fa-solid fa-bars text-white"></i> Menu</button>
+            <h1 class="font-custom text-white text-center text-3xl mt-[-1%]">Porsche</h1>
+        </header>
+        <!-- header js -->
+        <script>
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const toggleBtn = document.getElementById('toggleBtn');
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+
+            function closeBtn() {
+                toggleBtn.classList.add('hidden');
+            }
+            function openMenu() {
+                toggleBtn.classList.remove('hidden');
+            }
+
+            toggleBtn.addEventListener('click', openSidebar);
+            overlay.addEventListener('click', openMenu);
+            overlay.addEventListener('click', closeSidebar);
+        </script>
+
+        <!-- Content -->
+        <div class="absolute bottom-38 left-32">
             <h2 class="text-white text-7xl space-x-12 font-serif font-bold">Overfeel</h2>
             <br>
-            <button class="w-64 h-12 border border-2px border-white text-white hover:border-[#c3c9bf] rounded-sm">Discover the New Taycaan gts</button>
-          </div> 
+            <button
+                class="w-64 h-12 border border-2px border-white text-white hover:border-[#c3c9bf] rounded-sm">Discover
+                the New Taycaan gts</button>
+        </div>
     </section>
-    <main class="w-full  h-screen bg-white absolute">
+    <section class="w-full h-80 flex items-center">
+        <main class="w-full absolute flex justify-center items-center overflow-hidden">
+            <section class="w-4/5 h-[230px] flex justify-center items-center p-4 gap-6">
+                <div class="w-78 h-50 bg-[url(/assets/cayman.jpg)] bg-center bg-cover  drop-shadow-xl rounded-xl">
+                    <!-- drop-shadow -->
+                    <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
+                    <a href="#" class="absolute top-[75%] left-[5%] text-white font-bold">The 718 Cayman GTS 4.0.</a>
+                </div>
+                <div class="w-78 h-50 bg-[url(/assets/hybrid.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg">
+                    <!-- drop-shadow -->
+                    <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
+                    <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">The Cayenne E-hybrid <br>
+                        Coupe</a>
+                </div>
+                <div class="w-78 h-50 bg-[url(/assets/carrera.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg">
+                    <!-- drop-shadow -->
+                    <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
+                    <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">The new 911 Carrera S.</a>
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <section class="w-full">
+        <h3 class="font-serif text-4xl font-bold text-center">Models</h3>
+        <br>
+        <br>
+        <br>
+        <section class="w-full flex justify-center">
+            <main class=" mx-auto grid grid-cols-2 gap-5 mt-5 p-4">
+
+                <section class="w-[550px] h-[550px] relative bg-[url(/assets/img1.jpg)] bg-center bg-cover rounded-lg ">
+                    <!-- dark overlay -->
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
+                            driving pleasure</p>
+                        <p class="text-white">from US $ 100,900.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+
+                </section>
+                <section class="w-[550px] h-[550px] relative bg-[url(/assets/p3.jpg)] bg-center bg-cover rounded-lg">
+                    <!-- dark overlay -->
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The iconic, rear-engine sports car <br> With exceptional
+                            perfomance</p>
+                        <p class="text-white">from US $ 212,700.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+                </section>
+                <section
+                    class="w-[550px] h-[550px] relative bg-[url(/assets/p4.jpg)] bg-center bg-cover px-4 rounded-lg">
+                    <!-- dark overlay -->
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
+                            driving pleasure</p>
+                        <p class="text-white">from US $ 100,900.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+                </section>
+                <section
+                    class="w-[550px] h-[550px] relative bg-[url(/assets/p5.jpg)] bg-center bg-cover px-4 rounded-lg">
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
+                            driving pleasure</p>
+                        <p class="text-white">from US $ 100,900.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+                </section>
+                <section
+                    class="w-[550px] h-[550px] relative bg-[url(/assets/p6.jpg)] bg-center bg-cover px-4 rounded-lg">
+                    <!-- dark overlay -->
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
+                            driving pleasure</p>
+                        <p class="text-white">from US $ 100,900.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+                </section>
+                <section
+                    class="w-[550px] h-[550px] relative bg-[url(/assets/p7.jpg)] bg-center bg-cover px-4 rounded-lg">
+                    <!-- dark overlay -->
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                    <!-- content -->
+                    <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
+                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
+                            driving pleasure</p>
+                        <p class="text-white">from US $ 100,900.00</p>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
+                            your 718</button>
+                        <br>
+                        <button
+                            class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
+                            718 Models</button>
+                    </div>
+                </section>
+
+            </main>
+        </section>
+    </section>
+
+    <main class="w-full h-[550px] flex justify-center items-center p-8">
+        <section class="w-4/5 h-[380px] bg-black drop-shadow-lg rounded-lg flex">
+            <div class="w-[650px] h-[380px] bg-[url(/assets/porsche.jpg)] bg-center bg-cover"></div>
+            <div class="w-[450px] h-[380px] text-white flex justify-center items-center">
+                <div class="w-[430px] h-[280px]">
+                    <h2 class="text-xl font-bold">Find your new or pre-<br>owned Porsche.</h2>
+                    <br>
+                    <p class="font-normal">A Porsche is as individual as its owner. It is always an <br> expression of
+                        one’s own
+                        personality. We help you find <br> your personal dream vehicle from authorised Porsche <br>
+                        Centres.</p>
+                    <br>
+                    <button
+                        class="w-58 h-14 bg-white mx-auto rounded-lg text-black text-lg hover:bg-gray-400 transition duration-300 ease-in-out">Find
+                        Your Porsche</button>
+                </div>
+            </div>
+
+        </section>
 
     </main>
+    <section class="w-full h-80 items-center relative">
+        <div class="w-48 h-18 absolute left-[45%]
+        ">
+            <h4 class="text-2xl font-bold text-center">Discover</h4>
+        </div>
+        <main class="w-full h-[350px] flex justify-center items-center mt-5">
+            <section class="w-4/5 h-[230px] flex justify-center items-center p-4 gap-6">
+                <div
+                    class="w-78 h-[230px] bg-[url(/assets/p8.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg transition duration-300 ease-in-out hover:scale-110">
+                    <!-- drop-shadow -->
+                    <!-- <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div> -->
+                    <a href="#" class="absolute top-[75%] left-[5%] text-white font-bold">Porsche E- <br>Perfomance</a>
+                </div>
+                <div
+                    class="w-78 h-[230px] bg-[url(/assets/p9.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg transition duration-300 ease-in-out hover:scale-110">
+                    <!-- drop-shadow -->
+                    <!-- <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div> -->
+                    <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">Porsche Tequipment</a>
+                </div>
+                <div
+                    class="w-78 h-[230px] bg-[url(/assets/p10.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg transition duration-300 ease-in-out hover:scale-110">
+                    <!-- drop-shadow -->
+                    <!-- <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div> -->
+                    <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">Porsche Exclusive <br>
+                        Manufaktur</a>
+                </div>
+            </section>
+        </main>
+    </section>
+
+    <!-- footer-section -->
+    <footer class="w-full h-screen bg-[#0e0d12] text-white relative">
+        <section class="w-full grid grid-cols-3 gap-20 justify-center">
+            <div class="relative flex w-80 h-68 ml-[5%]">
+                <p class="absolute ml-5 text-xl">Current Region/ Language</p>
+                <p class="absolute top-10 text-lg">🇪🇬 Egypt/English <a href="#">Change</a></p>
+                <p class="absolute top-36"><span>Newsletter</span>
+                    <br>
+                    <br>
+                    Latest news directly in your inbox
+                </p>
+                <button class="absolute top-58 w-80 h-12 bg-white text-black">Subscribe</button>
+            </div>
+            <div class="relative flex w-80 h-68">
+                <p class="absolute top-36"><span>Contact</span>
+                    <br>
+                    <br>
+                    Do you have any questions?
+                </p>
+                <button class="absolute top-58 w-80 h-12 bg-white text-black">Subscribe</button>
+            </div>
+            <div class="relative flex w-80 h-68">
+                <p class="absolute top-36"><span>Social Media</span>
+                    <br>
+                    <br>
+                    Get in touch with us via social Media
+                </p>
+                <section class="absolute top-58 flex gap-3 text-black">
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white flex justify-center items-center">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class=" h-[200px] grid grid-cols-3 items-center">
+            <div class="w-48 ">
+                <p>Company</p>
+                <br>
+                <br>
+                <p>Porsche at a Glance</p>
+                <p>Patner Forum</p>
+            </div>
+            <div>
+                <p>Sustainability</p>
+                <p>Subsidiaries</p>
+                <p>Contact</p>
+            </div>
+            <div>
+                <p>Carrer</p>
+                <p>Press</p>
+            </div>
+        </section>
+        <hr class="border-none w-80 h-1 bg-white absolute left-[500px]">
+        <!-- copyright section -->
+        <section class="w-full h-18 absolute bottom-3 p-4">
+            <p class="text-center">&copy; 2025 Porsche Centre Egypt - SMG ENGINEERING AUTOMOTIVE CO. - Egypt.
+                Legal Notice.
+
+                Privacy Policy.
+
+                Open Source Software Notice.
+
+                Whistleblower System.</p>
+            <h1 class="font-custom text-white text-center text-xl mt-3">Porsche</h1>
+        </section>
+
+    </footer>
 </body>
 
 </html>
