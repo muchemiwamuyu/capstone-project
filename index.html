@@ -7,6 +7,10 @@
     <link href="./src/output.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f53e04fcb4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Porsche</title>
 </head>
 
@@ -25,20 +29,33 @@
 
         <!-- Sidebar -->
         <div id="sidebar"
-            class="fixed left-0 top-0 h-70 w-80 bg-white text-white transform -translate-x-full transition-transform duration-300">
-            <div class="p-6">
-                <h2 class="text-2xl font-bold">Sidebar Menu</h2>
-                <ul class="mt-40 space-y-4">
-                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Home</a></li>
-                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">About</a></li>
-                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Services</a></li>
-                    <li><a href="#" class="block p-3 hover:bg-gray-700 rounded">Contact</a></li>
+            class=" left-0 top-0 h-[400px] w-[450px] bg-white text-black transform -translate-x-full transition-transform duration-300 absolute rounded-lg">
+            <div class="mx-auto">
+                <h2 class="text-2xl font-bold"></h2>
+                <ul class="space-y-6">
+                    <li
+                        class="w-full h-12 flex items-center cursor-pointer hover:border hover:border-2px hover:border-gray-400 transition duration-500 ease-in-out">
+                        <a href="#">Models</a>
+                    </li>
+                    <li
+                        class="w-full h-12 flex items-center cursor-pointer hover:border hover:border-2px hover:border-gray-400 transition duration-500 ease-in-out">
+                        <a href="#">Vehicle Purchase</a>
+                    </li>
+                    <li
+                        class="w-full h-12 flex items-center cursor-pointer hover:border hover:border-2px hover:border-gray-400 transition duration-500 ease-in-out">
+                        <a href="#">Services</a>
+                    </li>
+                    <li
+                        class="w-full h-12 items-center cursor-pointer hover:border hover:border-2px hover:border-gray-400 transition duration-500 ease-in-out">
+                        <a href="#">Find a Dealer</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <!-- header section -->
         <header class="w-full text-lg absolute left-5 top-6">
-            <button id="toggleBtn" onclick="closeBtn()" class="text-white"><i class="fa-solid fa-bars text-white"></i> Menu</button>
+            <button id="toggleBtn" onclick="closeBtn()" class="text-white"><i class="fa-solid fa-bars text-white"></i>
+                Menu</button>
             <h1 class="font-custom text-white text-center text-3xl mt-[-1%]">Porsche</h1>
         </header>
         <!-- header js -->
@@ -81,18 +98,21 @@
     <section class="w-full h-80 flex items-center">
         <main class="w-full absolute flex justify-center items-center overflow-hidden">
             <section class="w-4/5 h-[230px] flex justify-center items-center p-4 gap-6">
-                <div class="w-78 h-50 bg-[url(/assets/cayman.jpg)] bg-center bg-cover  drop-shadow-xl rounded-xl">
+                <div
+                    class="w-78 h-50 bg-[url(/assets/cayman.jpg)] bg-center bg-cover  drop-shadow-xl rounded-xl transition duration-300 ease-in-out hover:scale-110">
                     <!-- drop-shadow -->
                     <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
                     <a href="#" class="absolute top-[75%] left-[5%] text-white font-bold">The 718 Cayman GTS 4.0.</a>
                 </div>
-                <div class="w-78 h-50 bg-[url(/assets/hybrid.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg">
+                <div
+                    class="w-78 h-50 bg-[url(/assets/hybrid.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg transition duration-300 ease-in-out hover:scale-110">
                     <!-- drop-shadow -->
                     <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
                     <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">The Cayenne E-hybrid <br>
                         Coupe</a>
                 </div>
-                <div class="w-78 h-50 bg-[url(/assets/carrera.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg">
+                <div
+                    class="w-78 h-50 bg-[url(/assets/carrera.jpg)] bg-center bg-cover drop-shadow-xl rounded-lg transition duration-300 ease-in-out hover:scale-110">
                     <!-- drop-shadow -->
                     <div class="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
                     <a href="#" class="absolute top-[70%] left-[5%] text-white font-bold">The new 911 Carrera S.</a>
@@ -139,11 +159,11 @@
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
-                            your 718</button>
+                            your 911</button>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
-                            718 Models</button>
+                            911 Models</button>
                     </div>
                 </section>
                 <section
@@ -152,17 +172,17 @@
                     <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                     <!-- content -->
                     <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
-                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
-                            driving pleasure</p>
-                        <p class="text-white">from US $ 100,900.00</p>
+                        <p class="text-white text-lg font-bold">The Pure Expression of an electric <br> sports-car with
+                            motorsport <br> Perfomance</p>
+                        <p class="text-white">from US $ 131,300.00</p>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
-                            your 718</button>
+                            your Taycan</button>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
-                            718 Models</button>
+                            Taycan Models</button>
                     </div>
                 </section>
                 <section
@@ -170,17 +190,17 @@
                     <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                     <!-- content -->
                     <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
-                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
-                            driving pleasure</p>
-                        <p class="text-white">from US $ 100,900.00</p>
+                        <p class="text-white text-lg font-bold">The sport car limounsine of an active<br> lifestyle with
+                            highest comfort</p>
+                        <p class="text-white">from US $ 208,500.00</p>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
-                            your 718</button>
+                            your panamera</button>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">All
-                            718 Models</button>
+                            panamera Models</button>
                     </div>
                 </section>
                 <section
@@ -189,9 +209,8 @@
                     <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                     <!-- content -->
                     <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
-                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
-                            driving pleasure</p>
-                        <p class="text-white">from US $ 100,900.00</p>
+                        <p class="text-white text-lg font-bold">All electric SUV impressive <br> E-perfomance</p>
+                        <p class="text-white">from US $ 91,800.00</p>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
@@ -208,9 +227,9 @@
                     <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
                     <!-- content -->
                     <div class="w-[520px] h-[230px] absolute bottom-0 grid justify-center">
-                        <p class="text-white text-lg font-bold">The Mid-engine sports car for two <br> made for pure
-                            driving pleasure</p>
-                        <p class="text-white">from US $ 100,900.00</p>
+                        <p class="text-white text-lg font-bold">The versatile SUV with sports-car <br> Perfomance and up
+                            to five seats</p>
+                        <p class="text-white">from US $ 158,900.00</p>
                         <br>
                         <button
                             class="w-80 h-12 bg-white hover:bg-gray-400 transition duration-300 ease-in-out rounded-lg">Configure
@@ -282,7 +301,7 @@
         <section class="w-full grid grid-cols-3 gap-20 justify-center">
             <div class="relative flex w-80 h-68 ml-[5%]">
                 <p class="absolute ml-5 text-xl">Current Region/ Language</p>
-                <p class="absolute top-10 text-lg">🇪🇬 Egypt/English <a href="#">Change</a></p>
+                <p class="absolute top-10 text-lg">🇪🇬 Egypt/English <a href="#" class="underline">Change</a></p>
                 <p class="absolute top-36"><span>Newsletter</span>
                     <br>
                     <br>
